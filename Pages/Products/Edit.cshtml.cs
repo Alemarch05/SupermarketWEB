@@ -20,17 +20,17 @@ namespace SupermarketWEB.Pages.Products
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            ViewData["CategoryID"] = new SelectList(_context.Categories, "Id", "Name");
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
             if (id == null || _context.Products == null)
             {
                 return NotFound();
             }
-            var Product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
-            if (Product == null)
+            var product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
+            if (product == null)
             {
                 return NotFound();
             }
-            Product = Product;
+            Product = product;
             return Page();
         }
 

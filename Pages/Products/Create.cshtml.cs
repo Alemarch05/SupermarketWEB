@@ -17,7 +17,7 @@ namespace SupermarketWEB.Pages.Products
 
         public IActionResult OnGet()
         {
-            ViewData["CategoryID"] = new SelectList(_context.Categories, "Id", "Name");
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
             return Page();
         }
         [BindProperty]
