@@ -23,14 +23,14 @@ namespace SupermarketWEB.Pages.Customers
             {
                 return NotFound();
             }
-            var Customer = await _context.Customers.FirstOrDefaultAsync(m => m.Id == id);
-            if (Customer == null)
+            var customer = await _context.Customers.FirstOrDefaultAsync(m => m.Id == id);
+            if (customer == null)
             {
                 return NotFound();
             }
             else
             {
-                Customer = Customer;
+                Customer = customer;
             }
             return Page();
         }

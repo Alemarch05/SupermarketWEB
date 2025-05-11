@@ -24,14 +24,14 @@ namespace SupermarketWEB.Pages.PayModes
             {
                 return NotFound();
             }
-            var PayMode = await _context.PayModes.FirstOrDefaultAsync(m => m.Id == id);
-            if (PayMode == null)
+            var payMode = await _context.PayModes.FirstOrDefaultAsync(m => m.Id == id);
+            if (payMode == null)
             {
                 return NotFound();
             }
             else
             {
-                PayMode = PayMode;
+                PayMode = payMode;
             }
             return Page();
         }
