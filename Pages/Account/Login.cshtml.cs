@@ -14,7 +14,6 @@ namespace SupermarketWEB.Pages.Account
 
         public async Task<IActionResult> OnPostAsync()
         {
-            Console.Write("CLICK" +User.Email +"Pass " +User.Password);
            if (!ModelState.IsValid) return Page();
 
             if (User.Email == "correo@gmail.com" || User.Password == "12345")
