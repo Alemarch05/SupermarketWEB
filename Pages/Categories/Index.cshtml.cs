@@ -6,7 +6,7 @@ using SupermarketWEB.Data;
 
 namespace SupermarketWEB.Pages.Categories
 {
-    [Authorize]
+    [Authorize (Roles ="admin")]
     public class IndexModel : PageModel
     {
         private readonly SupermarketContext _context;
