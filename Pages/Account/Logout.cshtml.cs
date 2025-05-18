@@ -6,8 +6,7 @@ namespace SupermarketWEB.Pages.Account
 {
     public class LogoutModel : PageModel
     {
-        public class logoutModel : PageModel
-        {
+        
             public async Task<IActionResult> OnPostAsync()
             {
                 await HttpContext.SignOutAsync("MyCookieAuth");
@@ -16,6 +15,6 @@ namespace SupermarketWEB.Pages.Account
             public void OnGet()
             {
             }
-        }
+        
     }
 }
